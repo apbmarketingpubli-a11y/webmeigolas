@@ -27,31 +27,38 @@
       overflow: hidden;
     }
 
-    /* NAV */
+    /* ---------- NAV ---------- */
     nav {
-      height: 70px;
+      height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 64px;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.92);
       backdrop-filter: blur(6px);
       border-bottom: 1px solid #eee;
     }
 
-    nav .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    nav .logo span {
+    .logo-text {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    .logo-text span {
       color: #d4a800;
     }
 
     nav ul {
+      list-style: none;
       display: flex;
       gap: 28px;
-      list-style: none;
       font-size: 0.95rem;
     }
 
@@ -60,9 +67,9 @@
       color: var(--texto);
     }
 
-    /* MAIN */
+    /* ---------- MAIN ---------- */
     main {
-      height: calc(100vh - 70px);
+      height: calc(100vh - 72px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -78,15 +85,15 @@
       align-items: center;
     }
 
-    /* IZQUIERDA */
+    /* ---------- HERO ---------- */
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 14px;
     }
 
     .hero p {
-      color: var(--gris);
       font-size: 1.05rem;
+      color: var(--gris);
       max-width: 520px;
       margin-bottom: 26px;
     }
@@ -105,7 +112,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
-    /* DERECHA */
+    /* ---------- CARD ---------- */
     .card {
       background: white;
       border-radius: 22px;
@@ -163,9 +170,31 @@
 
 <body>
 
-  <!-- NAVEGACIÓN -->
+  <!-- ---------- NAV ---------- -->
   <nav>
-    <div class="logo">Mei<span>golas</span></div>
+    <div class="logo">
+      <!-- LOGO MEIGA (SVG) -->
+      <svg width="42" height="42" viewBox="0 0 100 100" aria-hidden="true">
+        <!-- fondo -->
+        <circle cx="50" cy="50" r="48" fill="#FFD84D"/>
+        <!-- sombrero -->
+        <path d="M25 45 L75 45 L60 30 L40 30 Z" fill="#2a2a2a"/>
+        <!-- ala del sombrero -->
+        <ellipse cx="50" cy="47" rx="30" ry="6" fill="#2a2a2a"/>
+        <!-- cara -->
+        <circle cx="50" cy="62" r="12" fill="#ffffff"/>
+        <!-- ojos -->
+        <circle cx="46" cy="60" r="1.8" fill="#2a2a2a"/>
+        <circle cx="54" cy="60" r="1.8" fill="#2a2a2a"/>
+        <!-- sonrisa -->
+        <path d="M45 66 Q50 69 55 66" stroke="#2a2a2a" stroke-width="1.8" fill="none"/>
+      </svg>
+
+      <div class="logo-text">
+        Mei<span>golas</span>
+      </div>
+    </div>
+
     <ul>
       <li><a href="#">Inicio</a></li>
       <li><a href="#">Sobre nós</a></li>
@@ -174,16 +203,15 @@
     </ul>
   </nav>
 
-  <!-- CONTENIDO -->
+  <!-- ---------- MAIN ---------- -->
   <main>
     <section class="container">
 
-      <!-- HERO -->
       <div class="hero">
-        <h1>Golosinas artesanas<br>con alma galega</h1>
+        <h1>Golosinas artesanas<br>con maxia galega</h1>
         <p>
           En Meigolas elaboramos doces naturais inspirados nos sabores tradicionais
-          de Galicia, combinando receita, territorio e un toque de maxia.
+          de Galicia, combinando tradición, territorio e un toque de meigaría.
         </p>
 
         <div class="tags">
@@ -193,7 +221,6 @@
         </div>
       </div>
 
-      <!-- TARJETA -->
       <div class="card">
         <h2>Sabores destacados</h2>
 
