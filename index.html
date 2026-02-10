@@ -1,248 +1,109 @@
 <!DOCTYPE html>
 <html lang="gl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meigolas · Golosinas artesanas galegas</title>
-
-  <style>
-    :root {
-      --amarillo: #FFD84D;
-      --amarillo-suave: #FFF6D6;
-      --texto: #2a2a2a;
-      --gris: #6a6a6a;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", system-ui, sans-serif;
-    }
-
-    body {
-      background: linear-gradient(180deg, var(--amarillo-suave), #ffffff);
-      color: var(--texto);
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    /* ---------- NAV ---------- */
-    nav {
-      height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 64px;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid #eee;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-text {
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: 0.4px;
-    }
-
-    .logo-text span {
-      color: #d4a800;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 28px;
-      font-size: 0.95rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--texto);
-    }
-
-    /* ---------- MAIN ---------- */
-    main {
-      height: calc(100vh - 72px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .container {
-      max-width: 1200px;
-      width: 100%;
-      padding: 40px 64px;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    /* ---------- HERO ---------- */
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 14px;
-    }
-
-    .hero p {
-      font-size: 1.05rem;
-      color: var(--gris);
-      max-width: 520px;
-      margin-bottom: 26px;
-    }
-
-    .tags {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .tag {
-      background: white;
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    /* ---------- CARD ---------- */
-    .card {
-      background: white;
-      border-radius: 22px;
-      padding: 32px;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.1);
-      display: grid;
-      gap: 22px;
-    }
-
-    .card h2 {
-      font-size: 1.5rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .item {
-      background: var(--amarillo-suave);
-      padding: 14px;
-      border-radius: 12px;
-      font-size: 0.9rem;
-    }
-
-    .about {
-      font-size: 0.9rem;
-      color: var(--gris);
-      line-height: 1.5;
-    }
-
-    footer {
-      font-size: 0.75rem;
-      color: var(--gris);
-      text-align: right;
-    }
-
-    @media (max-width: 1000px) {
-      nav ul {
-        display: none;
-      }
-
-      .container {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      footer {
-        text-align: center;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Meigolas - Golosinas Galegas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ---------- NAV ---------- -->
-  <nav>
-    <div class="logo">
-      <!-- LOGO MEIGA (SVG) -->
-      <svg width="42" height="42" viewBox="0 0 100 100" aria-hidden="true">
-        <!-- fondo -->
-        <circle cx="50" cy="50" r="48" fill="#FFD84D"/>
-        <!-- sombrero -->
-        <path d="M25 45 L75 45 L60 30 L40 30 Z" fill="#2a2a2a"/>
-        <!-- ala del sombrero -->
-        <ellipse cx="50" cy="47" rx="30" ry="6" fill="#2a2a2a"/>
-        <!-- cara -->
-        <circle cx="50" cy="62" r="12" fill="#ffffff"/>
-        <!-- ojos -->
-        <circle cx="46" cy="60" r="1.8" fill="#2a2a2a"/>
-        <circle cx="54" cy="60" r="1.8" fill="#2a2a2a"/>
-        <!-- sonrisa -->
-        <path d="M45 66 Q50 69 55 66" stroke="#2a2a2a" stroke-width="1.8" fill="none"/>
-      </svg>
+<header>
+    <h1>Meigolas</h1>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#produtos">Golosinas</a>
+        <a href="#empresa">A Empresa</a>
+        <a href="#cores">Cores</a>
+        <a href="#tipos">Tipografías</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
 
-      <div class="logo-text">
-        Mei<span>golas</span>
-      </div>
+<!-- HERO -->
+<section id="inicio" class="hero">
+    <h2>Golosinas con sabor a Galicia</h2>
+    <p>
+        En Meigolas elaboramos golosinas naturais inspiradas nos sabores tradicionais
+        de Galicia, combinando tradición, territorio e un toque de meigaría.
+    </p>
+    <button onclick="mensaxe()">Descubrir Meigolas</button>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos">
+    <h2>As nosas golosinas</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Gominolas de Albariño</h3>
+            <p>Sabor doce inspirado no viño branco galego.</p>
+        </div>
+
+        <div class="card">
+            <h3>Caramelos de Mel Galego</h3>
+            <p>Elaborados con esencia natural de mel das nosas terras.</p>
+        </div>
+
+        <div class="card">
+            <h3>Gominolas de Queixo e Marmelo</h3>
+            <p>Inspiradas nun dos sabores máis tradicionais de Galicia.</p>
+        </div>
+
+        <div class="card">
+            <h3>Caramelos de Licor Café</h3>
+            <p>Un toque galego cun sabor doce e intenso.</p>
+        </div>
+
     </div>
+</section>
 
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Sobre nós</a></li>
-      <li><a href="#">Sabores</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </nav>
+<!-- EMPRESA -->
+<section id="empresa">
+    <h2>Sobre Meigolas</h2>
+    <p>
+        Meigolas é unha marca innovadora que transforma os sabores tradicionais
+        galegos en golosinas modernas. O noso obxectivo é unir tradición e creatividade,
+        ofrecendo produtos naturais, orixinais e inspirados no territorio galego.
+    </p>
+</section>
 
-  <!-- ---------- MAIN ---------- -->
-  <main>
-    <section class="container">
+<!-- CORES -->
+<section id="cores">
+    <h2>Cores corporativas</h2>
+    <p>
+        Empregamos tons marrón, dourado e crema porque transmiten tradición,
+        naturalidade e conexión coa terra galega. Estas cores evocan os ingredientes
+        naturais e o carácter artesanal da marca.
+    </p>
+</section>
 
-      <div class="hero">
-        <h1>Golosinas artesanas<br>con maxia galega</h1>
-        <p>
-          En Meigolas elaboramos doces naturais inspirados nos sabores tradicionais
-          de Galicia, combinando tradición, territorio e un toque de meigaría.
-        </p>
+<!-- TIPOGRAFIAS -->
+<section id="tipos">
+    <h2>Tipografías</h2>
+    <p>
+        Usamos unha tipografía serif clásica para transmitir tradición e identidade,
+        combinada cunha fonte limpa e lexible para facilitar a lectura e dar un toque moderno.
+    </p>
+</section>
 
-        <div class="tags">
-          <div class="tag">🌿 Ingredientes naturais</div>
-          <div class="tag">🧙‍♀️ Feito a man</div>
-          <div class="tag">🍯 Sabores do país</div>
-        </div>
-      </div>
+<!-- CONTACTO -->
+<section id="contacto">
+    <h2>Contacto</h2>
 
-      <div class="card">
-        <h2>Sabores destacados</h2>
+    <form>
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Mensaxe"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
 
-        <div class="grid">
-          <div class="item">🍎 Mazá galega</div>
-          <div class="item">🍯 Mel de montaña</div>
-          <div class="item">🍋 Limón do país</div>
-          <div class="item">🌰 Castaña</div>
-        </div>
+<footer>
+    <p>© 2026 Meigolas - Golosinas Galegas</p>
+</footer>
 
-        <div class="about">
-          Pequena empresa galega dedicada á creación de golosinas artesás,
-          respectando a tradición e apostando por un produto honesto e de proximidade.
-        </div>
-
-        <footer>
-          © Meigolas · Galicia
-        </footer>
-      </div>
-
-    </section>
-  </main>
-
+<script src="script.js"></script>
 </body>
 </html>
