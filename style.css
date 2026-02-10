@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #fffaf3;
+}
+
+/* HEADER */
+header {
+    background: #6b3e2e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f2c94c;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(120deg, #6b3e2e, #cfa15a);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    border: none;
+    background: white;
+    color: #6b3e2e;
+    cursor: pointer;
+}
+
+/* SECTIONS */
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+/* GRID */
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+form input, form textarea {
+    margin: 8px 0;
+    padding: 10px;
+}
+
+form button {
+    background: #6b3e2e;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+footer {
+    background: #6b3e2e;
+    color: white;
+    padding: 10px;
+}
